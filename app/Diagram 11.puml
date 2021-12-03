@@ -1,0 +1,69 @@
+@startuml
+class t.stepura.weatherappdiplom.ArchiveMenuActivity {
+- MyDbManager myDbManager
+~ TextView tvArchive
+# void onCreate(Bundle)
+# void onResume()
++ void TempArchive(View)
++ void HumArchive(View)
++ void WindArchive(View)
++ void CloudsArchive(View)
++ void PressArchive(View)
+}
+class t.stepura.weatherappdiplom.MainActivity {
+~ EditText etCity
+~ TextView tvResult
+- String url
+- String url2
+- String appid
+~ DecimalFormat df
+- Handler mHandler
+- MyDbManager myDbManager
+- Runnable mToastRunnable
+# void onCreate(Bundle)
+# void onResume()
++ void getWeatherDetails(View)
++ void getWeatherDetailsonfivedays(View)
++ void StartTimer(View)
++ void StopTimer(View)
++ void Archive(View)
+# void onDestroy()
+}
+class t.stepura.weatherappdiplom.db.MyDbHelper {
++ void onCreate(SQLiteDatabase)
++ void onUpgrade(SQLiteDatabase,int,int)
+}
+class t.stepura.weatherappdiplom.db.MyDbManager {
+- Context context
+- MyDbHelper myDbHelper
+- SQLiteDatabase db
++ void openDb()
++ void insertToDb(String,String,String,String,String,String,String)
++ List<String> getFromDb()
++ List<String> getFromDb1()
++ List<String> getFromDb2()
++ List<String> getFromDb3()
++ List<String> getFromDb4()
++ void closeDb()
+}
+class t.stepura.weatherappdiplom.db.MyConstants {
++ {static} String DB_NAME
++ {static} String TABLE_NAME
++ {static} int DB_VERSION
++ {static} String _ID
++ {static} String CITY
++ {static} String DATE
++ {static} String TEMP
++ {static} String HUM
++ {static} String WIND
++ {static} String CLOUDS
++ {static} String PRESS
++ {static} String TABLE_STRUCTURE
++ {static} String DROP_TABLE
+}
+
+
+androidx.appcompat.app.AppCompatActivity <|-- t.stepura.weatherappdiplom.ArchiveMenuActivity
+androidx.appcompat.app.AppCompatActivity <|-- t.stepura.weatherappdiplom.MainActivity
+android.database.sqlite.SQLiteOpenHelper <|-- t.stepura.weatherappdiplom.db.MyDbHelper
+@enduml

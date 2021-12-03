@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ArchiveMenuActivity"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="464dp"
+            android:background="#000000">
+
+            <TextView
+                android:id="@+id/tvArchive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:shadowColor="@color/text_shadow"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="2"
+                android:textSize="20dp" />
+
+
+        </ScrollView>
+
+    <Button
+        android:id="@+id/btnTEMP"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginBottom="10dp"
+        android:background="#0070c7"
+        android:onClick="TempArchive"
+        android:text="ТЕМПЕРАТУРА"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@null" />
+
+    <Button
+        android:id="@+id/btnHUMIDITY"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginBottom="10dp"
+        android:background="#0070c7"
+        android:onClick="HumArchive"
+        android:text="ВЛАЖНОСТЬ"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@null" />
+
+    <Button
+        android:id="@+id/btnWIND"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginBottom="10dp"
+        android:background="#0070c7"
+        android:onClick="WindArchive"
+        android:text="СКОРОСТЬ ВЕТРА"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@null" />
+
+    <Button
+        android:id="@+id/btnCLOUDS"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginBottom="10dp"
+        android:background="#0070c7"
+        android:onClick="CloudsArchive"
+        android:text="ОБЛАЧНОСТЬ"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@null" />
+
+    <Button
+        android:id="@+id/btnPRESSURE"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:layout_marginBottom="10dp"
+        android:background="#0070c7"
+        android:onClick="PressArchive"
+        android:text="ДАВЛЕНИЕ"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@null" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
